@@ -31,7 +31,7 @@ resource "azurerm_app_service" "test" {
 
   site_config {
 	always_on = true
-    linux_fx_version = "DOCKER|(${var.app_service_docker_image})"
+    linux_fx_version = "DOCKER|${var.app_service_docker_image}"
   }
 
   app_settings {
@@ -48,7 +48,7 @@ resource "azurerm_app_service_slot" "test" {
 
   site_config {
 	always_on = true
-    linux_fx_version = "DOCKER|(${var.app_service_docker_image})"
+    linux_fx_version = "DOCKER|${var.app_service_docker_image}"
   }
 
   app_settings {
