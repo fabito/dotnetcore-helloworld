@@ -80,3 +80,5 @@ curl https://serko-helloworld-staging.azurewebsites.net/api/values
 #Production 
 curl https://serko-helloworld.azurewebsites.net/api/values
 ```
+
+Since I couldn't use the Azure free account I destroyed the whole infrastructure to avoid the charges. Let me know if you need them up and running. It's just a `terraform apply` away ;-)
