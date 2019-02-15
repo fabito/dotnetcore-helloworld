@@ -11,7 +11,7 @@ variables:
 steps:
 - script: |
     dotnet build --configuration $(buildConfiguration)
-    dotnet test dotnetcore-tests --configuration $(buildConfiguration) --logger trx --collect "Code coverage"
+    dotnet test UnitTests --configuration $(buildConfiguration) --logger trx --collect "Code coverage"
     dotnet publish --configuration $(buildConfiguration) --output out
     docker build -f Dockerfile -t $(dockerId)/$(imageName) .
     docker login -u $(dockerId) -p $pswd
